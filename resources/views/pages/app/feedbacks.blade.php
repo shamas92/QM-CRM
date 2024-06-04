@@ -99,7 +99,8 @@
                                                                     </div>
                                                                     <div class="f-body">
                                                                         <div class="meta-mail-time">
-                                                                            <p class="user-email" data-mailTo="kirsten.beck@mail.com">{{$fb['username']}}</p>
+                                                                            <p class="user-email" data-mailTo="{{$fb['user_email']}}">{{$fb['username']}}</p>
+                                                                            <input type="hidden" id="senderEmail" value="{{$fb['user_email']}}">
                                                                         </div>
                                                                         <div class="meta-title-tag">
                                                                             <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"{{$fb['user_msg']}}"}]}'><span class="mail-title" data-mailTitle="{{$fb['msg_title']}}">{{$fb['msg_title']}} - </span> {{$fb['user_msg']}}</p>
@@ -134,16 +135,14 @@
                                                                         <input class="form-check-input inbox-chkbox" type="checkbox" id="form-check-default14">
                                                                     </div>
                                                                     <div class="f-head">
-                                                                        <div class="avatar avatar-sm">
-                                                                            <span class="avatar-title rounded-circle">E</span>
-                                                                        </div>
+                                                                        <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                                     </div>
                                                                     <div class="f-body">
                                                                         <div class="meta-mail-time">
                                                                             <p class="user-email" data-mailTo="reevesErnest@mail.com">{{$fb['username']}}</p>
                                                                         </div>
                                                                         <div class="meta-title-tag">
-                                                                            <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"Just uploaded new video Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.\n"}]}'><span class="mail-title" data-mailTitle="Youtube">Youtube - </span>Just uploaded new video Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                                                            <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"{{$fb['user_msg']}}"}]}'><span class="mail-title" data-mailTitle="{{$fb['msg_title']}}">{{$fb['msg_title']}} - </span>{{$fb['user_msg']}}</p>
                                                                             <div class="tags">
                                                                                 <span class="g-dot-primary"></span>
                                                                                 <span class="g-dot-warning"></span>
@@ -175,14 +174,14 @@
                                                                         <input class="form-check-input inbox-chkbox" type="checkbox" id="form-check-default17">
                                                                     </div>
                                                                     <div class="f-head">
-                                                                        <img src="{{Vite::asset('resources/images/profile-18.jpeg')}}" class="user-profile" alt="avatar">
+                                                                        <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                                     </div>
                                                                     <div class="f-body">
                                                                         <div class="meta-mail-time">
                                                                             <p class="user-email" data-mailTo="marleneWood@mail.com">{{$fb['username']}}</p>
                                                                         </div>
                                                                         <div class="meta-title-tag">
-                                                                            <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.\n"}]}'><span class="mail-title" data-mailTitle="eBill">eBill - </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.</p>
+                                                                            <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"{{$fb['user_msg']}}"}]}'><span class="mail-title" data-mailTitle="{{$fb['msg_title']}}">{{$fb['msg_title']}} - </span>{{$fb['msg_title']}}</p>
                                                                             <div class="tags">
                                                                                 <span class="g-dot-primary"></span>
                                                                                 <span class="g-dot-warning"></span>
@@ -214,21 +213,19 @@
                                         </div>
 
                                         <div id="mailCollapseEleven" class="collapse" aria-labelledby="mailHeadingEleven" data-bs-parent="#mailbox-inbox">
-                                            <div class="mail-content-container mailInbox" data-mailfrom="info@mail.com" data-mailto="kirsten.beck@mail.com" data-mailcc="">
+                                            <div class="mail-content-container mailInbox" data-mailfrom="" data-mailto="asd" data-mailcc="">
 
                                                 <div class="d-flex justify-content-between mb-5">
                                                     <div class="d-flex user-info">
                                                         <div class="f-head">
-                                                            <div class="avatar avatar-sm">
-                                                                <span class="avatar-title rounded-circle">KB</span>
-                                                            </div>
+                                                            <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                         </div>
                                                         <div class="f-body">
                                                             <div class="meta-title-tag">
-                                                                <h4 class="mail-usr-name" data-mailtitle="Verification Link">Kirsten Beck</h4>
+                                                                <h4 class="mail-usr-name" data-mailtitle="Verification Link"></h4>
                                                             </div>
                                                             <div class="meta-mail-time">
-                                                                <p class="user-email" data-mailto="kirsten.beck@mail.com">kirsten.beck@mail.com</p>
+                                                                <p class="user-email" data-mailto="ssd"></p>
                                                                 <p class="mail-content-meta-date">12/08/2022 -</p>
                                                                 <p class="meta-time align-self-center">11:09 AM</p>
                                                             </div>

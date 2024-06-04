@@ -272,5 +272,25 @@ $(document).ready(function() {
 	  $(this).parents('.mail-box-container').find('.tab-title').removeClass('mail-menu-show')
 	  $(this).parents('.mail-box-container').find('.mail-overlay').removeClass('mail-overlay-show')
 	})
+
+const feedbackItems = document.querySelectorAll('.mailInbox.feedbacks');
+
+feedbackItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    const username = item.querySelector('.user-email').textContent;
+    const messageTitle = item.querySelector('.mail-title').textContent;
+    const messageContent = item.querySelector('.mail-content-excerpt').dataset.mailDescription;
+	const senderEmail = item.querySelector('#senderEmail').value;
+
+    const mailCollapse = document.getElementById('mailCollapseEleven');
+
+    mailCollapse.querySelector('.mail-usr-name').textContent = username;
+    mailCollapse.querySelector('.meta-mail-time .user-email').textContent = senderEmail;
+    mailCollapse.querySelector('.mail-content').dataset.mailTitle = messageTitle;
+    mailCollapse.querySelector('.mail-content').dataset.mailDescription = messageContent;
+
+    mailCollapse.classList.add('show');
+  });
+});
 	
 });
