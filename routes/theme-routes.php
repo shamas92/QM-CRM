@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\defectController;
+use App\Http\Controllers\feedbackController;
 
 //use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
@@ -47,10 +48,12 @@ foreach ($prefixRouters as $prefixRouter) {
             Route::get('/product-defects', [DefectController::class, 'index'])->name('defects.index');
             Route::post('/product-defects', [DefectController::class, 'store'])->name('defects.store');
             Route::post('/product-defects/{id}', [DefectController::class, 'update'])->name('defects.update');
-            Route
+
             Route::get('/feedbacks', function () {
                 return view('pages.app.feedbacks', ['title' => 'Feedbacks']);
             })->name('feedbacks');
+            Route::get('feedbacks', [feedbackController::class, 'feedbacklist']);
+
             Route::get('/resolutions', function () {
                 return view('pages.app.resolutions', ['title' => 'Resolutions']);
             })->name('resolutions');

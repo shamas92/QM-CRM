@@ -80,42 +80,7 @@ $(document).ready(function() {
 	/*
 		Init. fn. checkAll ==> Checkbox check all
 	*/
-	document.getElementById('inboxAll').addEventListener('click', function() {
-		var getActiveList = document.querySelectorAll('.tab-title .list-actions.active');
-		var getActiveListID = '.'+getActiveList[0].id;
-
-		var getItemsCheckboxes = '';
-
-		if (getActiveList[0].id === 'personal' || getActiveList[0].id === 'work' || getActiveList[0].id === 'social' || getActiveList[0].id === 'private') {
-
-			getItemsGroupCheckboxes = document.querySelectorAll(getActiveListID);
-			for (var i = 0; i < getItemsGroupCheckboxes.length; i++) {
-				getItemsGroupCheckboxes[i].parentNode.parentNode.parentNode;
-
-				getItemsCheckboxes = document.querySelectorAll('.'+getItemsGroupCheckboxes[i].parentNode.parentNode.parentNode.className.split(' ')[0] + ' ' + getActiveListID + ' .inbox-chkbox');
-				
-				if (getItemsCheckboxes[i].checked) {
-					getItemsCheckboxes[i].checked = false;
-				} else {
-					if (this.checked) {
-						getItemsCheckboxes[i].checked = true;
-					}
-				}
-			}
-
-		} else {
-			getItemsCheckboxes = document.querySelectorAll('.mail-item'+getActiveListID + ' .inbox-chkbox');
-			for (var i = 0; i < getItemsCheckboxes.length; i++ ) {
-				if (getItemsCheckboxes[i].checked) {
-					getItemsCheckboxes[i].checked = false;
-				} else {
-					if (this.checked) {
-						getItemsCheckboxes[i].checked = true;
-					}
-				}
-			}
-		}
-	})
+	
 
 	// Search on each key pressed
 
@@ -201,29 +166,6 @@ $(document).ready(function() {
 		====================
 	*/
 
-	var quill = new Quill('#editor-container', {
-	  modules: {
-	    toolbar: [
-	      [{ header: [1, 2, false] }],
-	      ['bold', 'italic', 'underline'],
-	      ['image', 'code-block']
-	    ]
-	  },
-	  placeholder: 'Compose an epic...',
-	  theme: 'snow'  // or 'bubble'
-	});
-
-	// Validating input fields
-
-	var $_getValidationField = document.getElementsByClassName('validation-text');
-	var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	
-
-	
-	
-
-	
 	/*
 		=========================
 			Tab Functionality

@@ -93,7 +93,7 @@
                 </a>
             </li>
 
-            <li class="menu {{ Request::routeIs('feedbacks') ? 'active' : '' }}">
+            <li class="menu {{ request()->path() == 'light-menu/app/feedbacks' ? 'active' : '' }}">
                 <a href="{{getRouterValue();}}/light-menu/app/feedbacks" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
