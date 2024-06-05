@@ -204,7 +204,7 @@
                                     </div>
 
                                     <div class="content-box">
-                                        <div class="d-flex msg-close">
+                                        <div class="d-flex msg-close" id="mail-title-header">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left close-message">
                                                 <line x1="19" y1="12" x2="5" y2="12"></line>
                                                 <polyline points="12 19 5 12 12 5"></polyline>
@@ -213,7 +213,7 @@
                                         </div>
 
                                         <div id="mailCollapseEleven" class="collapse" aria-labelledby="mailHeadingEleven" data-bs-parent="#mailbox-inbox">
-                                            <div class="mail-content-container mailInbox" data-mailfrom="" data-mailto="asd" data-mailcc="">
+                                            <div class="mail-content-container mailInbox" data-mailfrom="" data-mailto="" data-mailcc="">
 
                                                 <div class="d-flex justify-content-between mb-5">
                                                     <div class="d-flex user-info">
@@ -222,10 +222,10 @@
                                                         </div>
                                                         <div class="f-body">
                                                             <div class="meta-title-tag">
-                                                                <h4 class="mail-usr-name" data-mailtitle="Verification Link"></h4>
+                                                                <h4 class="mail-usr-name" data-mailtitle="xzz"></h4>
                                                             </div>
                                                             <div class="meta-mail-time">
-                                                                <p class="user-email" data-mailto="ssd"></p>
+                                                                <p class="user-email" data-mailto=""></p>
                                                                 <p class="mail-content-meta-date">12/08/2022 -</p>
                                                                 <p class="meta-time align-self-center">11:09 AM</p>
                                                             </div>
@@ -247,12 +247,7 @@
                                                     </div>
                                                 </div>
 
-                                                <p class="mail-content" data-mailTitle="Verification Link" data-maildescription='{"ops":[{"insert":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.\n"}]}'> Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </p>
-
-                                                <p>Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-
-                                                <p>Best Regards,</p>
-                                                <p>Kirsten Beck</p>
+                                                <p class="mail-content" data-mailTitle="" data-maildescription='{"ops":[{"insert":""}]}'></p>
 
                                             </div>
                                         </div>
