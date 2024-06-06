@@ -16,13 +16,13 @@
         <div class="navbar-nav theme-brand flex-row  text-center">
             <div class="nav-logo">
                 <div class="nav-item theme-logo">
-                    <a href="{{getRouterValue();}}/dashboard/analytics">
+                    <a href="http://laravel.test/light-menu/dashboard/analytics">
                         <img src="{{Vite::asset('resources/images/new_logo.svg')}}" class="navbar-logo logo-dark" alt="logo">
                         <img src="{{Vite::asset('resources/images/new_logo.svg')}}" class="navbar-logo logo-light" alt="logo">
                     </a>
                 </div>
                 <div class="nav-item theme-text">
-                    <a href="{{getRouterValue();}}/dashboard/analytics" class="nav-link"> CRM </a>
+                    <a href="http://laravel.test/light-menu/dashboard/analytics" class="nav-link"> CRM </a>
                 </div>
             </div>
             <div class="nav-item sidebar-toggle">
@@ -106,7 +106,7 @@
                 </a>
             </li>
 
-            <li class="menu {{ Request::routeIs('resolutions') ? 'active' : '' }}">
+            <li class="menu {{ request()->path() == 'light-menu/app/resolutions' ? 'active' : '' }}">
                 <a href="{{getRouterValue();}}/light-menu/app/resolutions" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle">

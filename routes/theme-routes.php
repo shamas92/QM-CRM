@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\defectController;
 use App\Http\Controllers\feedbackController;
+use App\Http\Controllers\resolutionController;
 
 //use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
@@ -57,6 +58,8 @@ foreach ($prefixRouters as $prefixRouter) {
             Route::get('/resolutions', function () {
                 return view('pages.app.resolutions', ['title' => 'Resolutions']);
             })->name('resolutions');
+            Route::get('resolutions', [resolutionController::class, 'tasklist']);
+
         });
     });
 }
