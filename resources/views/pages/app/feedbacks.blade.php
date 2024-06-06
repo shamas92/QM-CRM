@@ -91,9 +91,7 @@
                                                             <div class="mail-item-inner">
 
                                                                 <div class="d-flex">
-                                                                    <div class="form-check form-check-primary form-check-inline mt-1" data-bs-toggle="collapse" data-bs-target>
-                                                                        <input class="form-check-input inbox-chkbox" type="checkbox" id="form-check-default6">
-                                                                    </div>
+
                                                                     <div class="f-head">
                                                                         <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                                     </div>
@@ -129,20 +127,16 @@
                                                     <div class="mb-0">
                                                         <div class="mail-item-heading work collapsed" data-bs-toggle="collapse" role="navigation" data-bs-target="#mailCollapseFourteen" aria-expanded="false">
                                                             <div class="mail-item-inner">
-
                                                                 <div class="d-flex">
-                                                                    <div class="form-check form-check-primary form-check-inline mt-1" data-bs-toggle="collapse" data-bs-target>
-                                                                        <input class="form-check-input inbox-chkbox" type="checkbox" id="form-check-default14">
-                                                                    </div>
                                                                     <div class="f-head">
                                                                         <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                                     </div>
                                                                     <div class="f-body">
                                                                         <div class="meta-mail-time">
-                                                                            <p class="user-email" data-mailTo="reevesErnest@mail.com">{{$fb['username']}}</p>
+                                                                            <p class="user-email" data-mailto="reevesErnest@mail.com">{{$fb['username']}}</p>
                                                                         </div>
                                                                         <div class="meta-title-tag">
-                                                                            <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"insert":"{{$fb['user_msg']}}"}]}'><span class="mail-title" data-mailTitle="{{$fb['msg_title']}}">{{$fb['msg_title']}} - </span>{{$fb['user_msg']}}</p>
+                                                                            <p class="mail-content-excerpt" data-maildescription='{"ops":[{"insert":"{{$fb['user_msg']}}"}]}'><span class="mail-title" data-mailtitle="{{$fb['msg_title']}}">{{$fb['msg_title']}} - </span>{{$fb['user_msg']}}</p>
                                                                             <div class="tags">
                                                                                 <span class="g-dot-primary"></span>
                                                                                 <span class="g-dot-warning"></span>
@@ -161,6 +155,7 @@
                                             @endif
                                             @endforeach
 
+
                                             @foreach($feedbacks as $fb)
                                             @if($fb['feedback_type'] == "complain")
                                             <div class="mail-item draft complaints">
@@ -170,9 +165,7 @@
                                                             <div class="mail-item-inner">
 
                                                                 <div class="d-flex">
-                                                                    <div class="form-check form-check-primary form-check-inline mt-1" data-bs-toggle="collapse" data-bs-target>
-                                                                        <input class="form-check-input inbox-chkbox" type="checkbox" id="form-check-default17">
-                                                                    </div>
+
                                                                     <div class="f-head">
                                                                         <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                                     </div>
@@ -231,115 +224,67 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="action-btns">
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Reply">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left reply">
-                                                                <polyline points="9 14 4 9 9 4"></polyline>
-                                                                <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Forward">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right forward">
-                                                                <polyline points="15 14 20 9 15 4"></polyline>
-                                                                <path d="M4 20v-7a4 4 0 0 1 4-4h12"></path>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
+                                                    
                                                 </div>
 
                                                 <p class="mail-content" data-mailTitle="" data-maildescription='{"ops":[{"insert":""}]}'></p>
 
                                             </div>
                                         </div>
-
                                         <div id="mailCollapseFourteen" class="collapse" aria-labelledby="mailHeadingFourteen" data-bs-parent="#mailbox-inbox">
-                                            <div class="mail-content-container mailInbox" data-mailfrom="info@mail.com" data-mailto="reevesErnest@mail.com" data-mailcc="">
+                                            <div class="mail-content-container mailInbox" data-mailfrom="" data-mailto="" data-mailcc="">
 
                                                 <div class="d-flex justify-content-between mb-5">
                                                     <div class="d-flex user-info">
                                                         <div class="f-head">
-                                                            <div class="avatar avatar-sm">
-                                                                <span class="avatar-title rounded-circle">E</span>
-                                                            </div>
+                                                        <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                         </div>
                                                         <div class="f-body">
                                                             <div class="meta-title-tag">
-                                                                <h4 class="mail-usr-name" data-mailtitle="Youtube">Youtube</h4>
+                                                                <h4 class="mail-usr-name" data-mailtitle="m2">m2</h4>
                                                             </div>
                                                             <div class="meta-mail-time">
-                                                                <p class="user-email" data-mailto="reevesErnest@mail.com">reevesErnest@mail.com</p>
+                                                                <p class="user-email" data-mailto="test2@gmail.com">test2@gmail.com</p>
                                                                 <p class="mail-content-meta-date">06/02/2022 -</p>
                                                                 <p class="meta-time align-self-center">8:25 PM</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="action-btns">
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Reply">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left reply">
-                                                                <polyline points="9 14 4 9 9 4"></polyline>
-                                                                <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Forward">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right forward">
-                                                                <polyline points="15 14 20 9 15 4"></polyline>
-                                                                <path d="M4 20v-7a4 4 0 0 1 4-4h12"></path>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
+                                                    
                                                 </div>
 
-                                                <p class="mail-content" data-mailTitle="Youtube" data-maildescription='{"ops":[{"insert":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.\n"}]}'> Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </p>
-
-                                                <p>Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-
-                                                <p>Best Regards,</p>
-                                                <p>Ernest Reeves</p>
+                                                <p class="mail-content" data-mailTitle="m2" data-maildescription='{"ops":[{"insert":"test message"}]}'> test message </p>
+                                                
+                                                <p>test user</p>
 
                                             </div>
                                         </div>
 
                                         <div id="mailCollapseSeventeen" class="collapse" aria-labelledby="mailHeadingSeventeen" data-bs-parent="#mailbox-inbox">
-                                            <div class="mail-content-container mailInbox" data-mailfrom="info@mail.com" data-mailto="infocompany@mail.com" data-mailcc="">
+                                            <div class="mail-content-container mailInbox" data-mailfrom="" data-mailto="" data-mailcc="">
 
                                                 <div class="d-flex justify-content-between mb-5">
                                                     <div class="d-flex user-info">
                                                         <div class="f-head">
-                                                            <img src="{{Vite::asset('resources/images/profile-18.jpeg')}}" class="user-profile" alt="avatar">
+                                                        <img src="{{Vite::asset($images[array_rand($images)])}}" class="user-profile" alt="avatar">
                                                         </div>
                                                         <div class="f-body">
                                                             <div class="meta-title-tag">
-                                                                <h4 class="mail-usr-name" data-mailtitle="eBill">eBill</h4>
+                                                                <h4 class="mail-usr-name" data-mailtitle="m5">m5</h4>
                                                             </div>
                                                             <div class="meta-mail-time">
-                                                                <p class="user-email" data-mailto="infocompany@mail.com">infocompany@mail.com</p>
+                                                                <p class="user-email" data-mailto="test5@gmail.com">test5@gmail.com</p>
                                                                 <p class="mail-content-meta-date">11/25/2021 -</p>
                                                                 <p class="meta-time align-self-center">1:51 PM</p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="action-btns">
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Reply">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left reply">
-                                                                <polyline points="9 14 4 9 9 4"></polyline>
-                                                                <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" data-original-title="Forward">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right forward">
-                                                                <polyline points="15 14 20 9 15 4"></polyline>
-                                                                <path d="M4 20v-7a4 4 0 0 1 4-4h12"></path>
-                                                            </svg>
-                                                        </a>
-                                                    </div>
+                                                    
                                                 </div>
 
-                                                <p class="mail-content" data-mailTitle="eBill" data-maildescription='{"ops":[{"insert":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar feugiat consequat. Duis lacus nibh, sagittis id varius vel, aliquet non augue. Vivamus sem ante, ultrices at ex a, rhoncus ullamcorper tellus. Nunc iaculis eu ligula ac consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum mattis urna neque, eget posuere lorem tempus non. Suspendisse ac turpis dictum, convallis est ut, posuere sem. Etiam imperdiet aliquam risus, eu commodo urna vestibulum at. Suspendisse malesuada lorem eu sodales aliquam.\n"}]}'> Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </p>
+                                                <p class="mail-content" data-mailTitle="m5" data-maildescription='{"ops":[{"insert":"test message"}]}'> test message </p>
 
-                                                <p>Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
-
-                                                <p>Best Regards,</p>
-                                                <p>Info Company</p>
+                                                <p>test user 5</p>
                                             </div>
                                         </div>
                                     </div>
