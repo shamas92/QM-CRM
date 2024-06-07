@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\userController;
 use App\Http\Controllers\defectController;
 use App\Http\Controllers\feedbackController;
 use App\Http\Controllers\resolutionController;
@@ -59,7 +60,20 @@ foreach ($prefixRouters as $prefixRouter) {
                 return view('pages.app.resolutions', ['title' => 'Resolutions']);
             })->name('resolutions');
             Route::get('resolutions', [resolutionController::class, 'tasklist']);
+        });
 
+        Route::prefix('authentication')->group(function () {
+            Route::prefix('/cover')->group(function () {
+                Route::post('/signin', [UserController::class, 'login'])->name('login');
+                Route::get('/signin', function () {
+                    return view('pages.authentication.cover.signin', ['title' => 'SignIn']);
+                })->name('signin');
+
+                Route::post('/signup', [UserController::class, 'signup'])->name('signup');
+                Route::get('/signup', function () {
+                    return view('pages.authentication.cover.signup', ['title' => 'SignUp']);
+                })->name('signup');
+            });
         });
     });
 }
