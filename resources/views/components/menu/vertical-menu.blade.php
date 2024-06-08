@@ -36,16 +36,41 @@
         </div>
         @if (!Request::is('collapsible-menu/*'))
         <div class="profile-info">
+            @if (isset($authUser))
+            @if ($authUser->name == 'Shamas')
             <div class="user-info">
                 <div class="profile-img">
                     <img src="{{Vite::asset('resources/images/shamas_pic.jpg')}}" alt="avatar">
                 </div>
                 <div class="profile-content">
-                    <h6 class="">Shamas Rehman</h6>
-                    <p class="">Project Developer</p>
+                    <h6>{{ $authUser->name }}</h6>
+                    <p>Project Developer</p>
                 </div>
             </div>
+            @elseif ($authUser->name == 'Talha')
+            <div class="user-info">
+                <div class="profile-img">
+                    <img src="{{Vite::asset('resources/images/talha_profile.png')}}" alt="avatar">
+                </div>
+                <div class="profile-content">
+                    <h6>{{ $authUser->name }}</h6>
+                    <p>Designer</p>
+                </div>
+            </div>
+            @elseif ($authUser->name == 'Laiba')
+            <div class="user-info">
+                <div class="profile-img">
+                    <img src="{{Vite::asset('resources/images/profile-4.jpeg')}}" alt="avatar">
+                </div>
+                <div class="profile-content">
+                    <h6>{{ $authUser->name }}</h6>
+                    <p>SQA Engineer</p>
+                </div>
+            </div>
+            @endif
+            @endif
         </div>
+
         @endif
         <div class="shadow-bottom"></div>
         <ul class="list-unstyled menu-categories" id="accordionExample">

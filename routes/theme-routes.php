@@ -75,5 +75,8 @@ foreach ($prefixRouters as $prefixRouter) {
                 })->name('signup');
             });
         });
+        Route::get('/vertical-menu', [userController::class, 'index'])->middleware('auth');
+        
+
     });
 }

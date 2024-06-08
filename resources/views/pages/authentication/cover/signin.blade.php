@@ -40,6 +40,15 @@
                                     <p>Enter your email and password to login</p>
                                 </div>
                                 <div class="col-md-12">
+                                @if($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul style="margin: 0;">
+                                                @foreach($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <form method="POST" action="{{ route('signin') }}">
                                         @csrf
                                         <div class="mb-3">
@@ -102,7 +111,7 @@
 
                                 <div class="col-12">
                                     <div class="text-center">
-                                        <p class="mb-0">Don't have an account? <a href="{{ route('register') }}" class="text-warning">Sign Up</a></p>
+                                        <p class="mb-0">Don't have an account? <a href="/light-menu/authentication/cover/signup" class="text-warning">Sign Up</a></p>
                                     </div>
                                 </div>
 
