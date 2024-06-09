@@ -67,6 +67,16 @@
                     <p>SQA Engineer</p>
                 </div>
             </div>
+            @else
+            <div class="user-info">
+                <div class="profile-img">
+                    <img src="{{Vite::asset('resources/images/profile-1.jpeg')}}" alt="avatar">
+                </div>
+                <div class="profile-content">
+                    <h6>User Name</h6>
+                    <p>User Role</p>
+                </div>
+            </div>
             @endif
             @endif
         </div>

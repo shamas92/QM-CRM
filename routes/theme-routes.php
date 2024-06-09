@@ -30,10 +30,10 @@ foreach ($prefixRouters as $prefixRouter) {
 
         Route::prefix('dashboard')->group(function () {
             Route::get('/analytics', function () {
-                return view('pages.dashboard.analytics', ['title' => 'CRM Admin']);
+                return view('pages.dashboard.analytics', ['title' => 'Analytics']);
             })->name('analytics');
             Route::get('/sales', function () {
-                return view('pages.dashboard.sales', ['title' => 'CRM Admin']);
+                return view('pages.dashboard.sales', ['title' => 'Sales']);
             })->name('sales');
         });
 

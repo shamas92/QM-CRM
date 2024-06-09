@@ -84,10 +84,9 @@
                     <div class="notification-scroll">
                         @if (isset($authUser))
                         @if ($authUser->name == 'Shamas')
-                        <!-- Show notifications for Talha and Laiba -->
                         <div class="dropdown-item">
                             <div class="media server-log">
-                                <img src="{{Vite::asset('resources/images/talha_profile.png')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/talha_profile.png') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Talha Tariq</h6>
@@ -105,7 +104,7 @@
 
                         <div class="dropdown-item">
                             <div class="media ">
-                                <img src="{{Vite::asset('resources/images/profile-4.jpeg')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/profile-4.jpeg') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Laiba Waseem</h6>
@@ -123,7 +122,7 @@
                         @elseif ($authUser->name == 'Talha')
                         <div class="dropdown-item">
                             <div class="media server-log">
-                                <img src="{{Vite::asset('resources/images/shamas_pic.jpg')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/shamas_pic.jpg') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Shamas Rehman</h6>
@@ -141,7 +140,7 @@
 
                         <div class="dropdown-item">
                             <div class="media ">
-                                <img src="{{Vite::asset('resources/images/profile-4.jpeg')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/profile-4.jpeg') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Laiba Waseem</h6>
@@ -159,7 +158,7 @@
                         @elseif ($authUser->name == 'Laiba')
                         <div class="dropdown-item">
                             <div class="media server-log">
-                                <img src="{{Vite::asset('resources/images/talha_profile.png')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/talha_profile.png') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Talha Tariq</h6>
@@ -177,7 +176,7 @@
 
                         <div class="dropdown-item">
                             <div class="media ">
-                                <img src="{{Vite::asset('resources/images/Shamas_pic.jpg')}}" class="img-fluid me-2" alt="avatar">
+                                <img src="{{ Vite::asset('resources/images/Shamas_pic.jpg') }}" class="img-fluid me-2" alt="avatar">
                                 <div class="media-body">
                                     <div class="data-info">
                                         <h6 class="">Shamas Rehman</h6>
@@ -192,8 +191,28 @@
                                 </div>
                             </div>
                         </div>
+                        @else
+                        <div class="dropdown-item">
+                            <div class="media server-log">
+                                <img src="{{ Vite::asset('resources/images/default_profile.png') }}" class="img-fluid me-2" alt="avatar">
+                                <div class="media-body">
+                                    <div class="data-info">
+                                        <h6 class="">Default User</h6>
+                                        <p class="">No recent activity</p>
+                                    </div>
+                                    <div class="icon-status">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         @endif
                         @endif
+
+
                     </div>
 
                 </div>
@@ -267,12 +286,10 @@
                             </svg> <span>Lock Screen</span>
                         </a>
                     </div>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
+                   
 
-                    <div class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <a href="#">
+                    <div class="dropdown-item">
+                        <a href="/light-menu/authentication/cover/signin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
                                 <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                 <polyline points="16 17 21 12 16 7"></polyline>
