@@ -40,7 +40,7 @@
             @if ($authUser->name == 'Shamas')
             <div class="user-info">
                 <div class="profile-img">
-                    <img src="{{Vite::asset('resources/images/shamas_pic.jpg')}}" alt="avatar">
+                    <img src="{{ Vite::asset('resources/images/shamas_pic.jpg') }}" alt="avatar">
                 </div>
                 <div class="profile-content">
                     <h6>{{ $authUser->name }}</h6>
@@ -50,7 +50,7 @@
             @elseif ($authUser->name == 'Talha')
             <div class="user-info">
                 <div class="profile-img">
-                    <img src="{{Vite::asset('resources/images/talha_profile.png')}}" alt="avatar">
+                    <img src="{{ Vite::asset('resources/images/talha_profile.png') }}" alt="avatar">
                 </div>
                 <div class="profile-content">
                     <h6>{{ $authUser->name }}</h6>
@@ -60,17 +60,19 @@
             @elseif ($authUser->name == 'Laiba')
             <div class="user-info">
                 <div class="profile-img">
-                    <img src="{{Vite::asset('resources/images/profile-4.jpeg')}}" alt="avatar">
+                    <img src="{{ Vite::asset('resources/images/profile-4.jpeg') }}" alt="avatar">
                 </div>
                 <div class="profile-content">
                     <h6>{{ $authUser->name }}</h6>
                     <p>SQA Engineer</p>
                 </div>
-            </div>
-            @else
+            </div>            
+            @endif
+            @endif
+            @if (!isset($authUser))
             <div class="user-info">
                 <div class="profile-img">
-                    <img src="{{Vite::asset('resources/images/profile-1.jpeg')}}" alt="avatar">
+                    <img src="{{ Vite::asset('resources/images/profile-1.jpeg') }}" alt="avatar">
                 </div>
                 <div class="profile-content">
                     <h6>User Name</h6>
@@ -78,8 +80,9 @@
                 </div>
             </div>
             @endif
-            @endif
+
         </div>
+
 
         @endif
         <div class="shadow-bottom"></div>
