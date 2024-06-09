@@ -1,6 +1,6 @@
 <x-base-layout :scrollspy="false">
     <x-slot:pageTitle>
-
+Defects
         </x-slot>
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->

@@ -1,6 +1,7 @@
 <x-base-layout :scrollspy="false">
 
     <x-slot:pageTitle>
+        Resolutions
         </x-slot>
 
         <!-- BEGIN GLOBAL MANDATORY STYLES -->
